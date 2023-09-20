@@ -1,0 +1,16 @@
+.menuIconContainer{
+    margin-top: 1vh;
+    margin-right: 1vw;
+    float: right;
+    height: fit-content;
+    width: fit-content;
+    font-size: large;
+    color: #fff;
+    background-color: #092E5d;
+    border-style: none;
+}
+
+.Icon{
+    height: 100%;
+    width: 100%;
+}

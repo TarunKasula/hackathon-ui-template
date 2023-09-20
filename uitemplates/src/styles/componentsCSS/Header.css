@@ -1,0 +1,84 @@
+.head {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 20vw;
+}
+
+.headerDivider {
+  background: #ffffff;
+  justify-content: center;
+  margin-top: 2.25vh;
+  width: 0.1vw;
+  height: 50%;
+}
+
+.headerText {
+  color: #ffffff;
+  height: 100%;
+  width: 40vw;
+  object-fit: contain;
+  padding-left: 1vw;
+  font-size: medium;
+}
+
+.logoImage {
+  padding-left: 1vw;
+  margin-right: 2vw;
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.modeText {
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.headerEnd {
+  margin-left: 1vw;
+  margin-right: 7vw;
+  color: #ffffff;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 9vw;
+}
+
+.divider {
+  background: #ffffff;
+  justify-content: center;
+  margin-top: 0.5vh;
+  margin-left: 1vw;
+  width: 0.08vw;
+  height: 50%;
+}
+.logout {
+  justify-content: end;
+  margin-right: 2vw;
+}
+
+.logout button {
+  background-color: #fac014;
+  object-fit: contain;
+  border-style: none;
+  height: auto;
+  width: 8vw;
+  font-size: medium;
+  line-height: 4vh;
+  flex-flow: row wrap;
+  justify-content: center;
+  
+}
+.logout button:hover {
+  background-color: #e89e0e;
+  font-weight: bolder;
+  cursor: grab;
+}
+
+.logout button:active{
+    background-color: #fac014;
+    font-weight: normal;
+}
