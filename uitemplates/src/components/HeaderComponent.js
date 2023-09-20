@@ -1,12 +1,11 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { Switch, ConfigProvider } from "antd";
-import { createFromIconfontCN} from "@ant-design/icons";
+import { createFromIconfontCN } from "@ant-design/icons";
 import "../styles/componentsCSS/Header.css";
-
+import {useNavigate } from 'react-router-dom'
 function HeaderComponent() {
   const [themeText, setThemeText] = useState("Dark Mode");
   const [loginText, setLoginText] = useState("Login");
-  
   const IconFont = createFromIconfontCN({
     scriptUrl: "//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js",
   });
@@ -29,19 +28,26 @@ function HeaderComponent() {
         },
       }}
     >
-      <div className="head">
-      <div className="headerText" style={{fontSize: '28px', fontWeight: 'bold'}}> Team Jupyter </div>
+      <div className="head" onClick={{}}>
+        <div
+          className="headerText"
+          style={{ fontSize: "25px", fontWeight: "bold" }}
+        >
+          {" "}
+          The Endevour Project{" "}
+        </div>
         <div className="headerDivider"></div>
       </div>
       <div className="headerText"> Hackathon UI </div>
-      <Switch
+      {/* <Switch
         defaultChecked
         onChange={onChange}
         style={{ marginRight: "1vw" }}
-      />
-      <div className="modeText">{themeText}</div>
-      <div className="divider" />
-      <div className="headerEnd" title={"Hello, Username"}>Hello, Username </div>
+      /> */}
+      {/* <div className="divider" /> */}
+      <div className="headerEnd" title={"Hello, Username"}>
+        Hello, Username{" "}
+      </div>
 
       <div className="logout">
         <button

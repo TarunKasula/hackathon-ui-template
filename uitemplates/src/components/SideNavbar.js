@@ -1,6 +1,16 @@
 import React from "react";
 import { ConfigProvider, Menu } from "antd";
 import {
+  AppstoreOutlined,
+  ContainerOutlined,
+  DesktopOutlined,
+  HomeOutlined,
+  MailOutlined,
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
+  PieChartOutlined,
+} from '@ant-design/icons';
+import {
   UserOutlined,
   LaptopOutlined,
   NotificationOutlined,
@@ -11,24 +21,19 @@ const items1 = ["1", "2", "3"].map((key) => ({
   key,
   label: `nav ${key}`,
 }));
-
-const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map(
-  (icon, index) => {
-    const key = String(index + 1);
-    return {
-      key: `sub${key}`,
-      icon: React.createElement(icon),
-      label: `subnav ${key}`,
-      children: new Array(4).fill(null).map((_, j) => {
-        const subKey = index * 4 + j + 1;
-        return {
-          key: subKey,
-          label: `option${subKey}`,
-        };
-      }),
-    };
-  }
-);
+function getItem(label, key, icon, children, type) {
+  return {
+    key,
+    icon, 
+    children,
+    label,
+    type,
+  };
+}
+const items2 = [getItem('Home', '1', <HomeOutlined />),
+getItem('Option 2', '2', <DesktopOutlined />),
+getItem('Option 3', '3', <ContainerOutlined />),
+];
 
 const SideNavbar = ({ menu }) => {
   return (

@@ -1,6 +1,7 @@
 .head {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content:center;
   height: 100%;
   width: 20vw;
 }
@@ -45,6 +46,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   width: 9vw;
+  margin-left: 6vw;
 }
 
 .divider {
@@ -56,21 +58,19 @@
   height: 50%;
 }
 .logout {
-  justify-content: end;
-  margin-right: 2vw;
+  justify-content:flex-end;
 }
 
 .logout button {
   background-color: #fac014;
-  object-fit: contain;
   border-style: none;
   height: auto;
   width: 8vw;
   font-size: medium;
   line-height: 4vh;
-  flex-flow: row wrap;
-  justify-content: center;
-  
+  justify-content: flex-end;
+  margin-left: 6vw;
+  margin-right: 2vw;
 }
 .logout button:hover {
   background-color: #e89e0e;

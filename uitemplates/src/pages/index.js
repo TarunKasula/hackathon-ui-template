@@ -1,70 +1,185 @@
 import { ConfigProvider, Table, Input } from "antd";
 import React, { useState } from "react";
-import GraphVisualization from 'react-graph-viz-engine'
+import { Col, Row } from "antd";
+import { useNavigate } from "react-router-dom";
+import {
+  EditOutlined,
+  EllipsisOutlined,
+  SettingOutlined,
+} from "@ant-design/icons";
+import { Avatar, Card } from "antd";
+const { Meta } = Card;
 const { Search } = Input;
 
-
 function Index() {
-    return (
-        <div>
-            Hellow World
-            <GraphVisualization
-                data={{
-                    data: {
-                        actors: [
-                            {
-                                ID: 1,
-                                __typename: 'Bank',
-                                acted_in: [
-                                    {
-                                        ID: 3,
-                                        __typename: 'Bank',
-                                        genres: [
-                                            {
-                                                ID: 5,
-                                                __typename: 'Bank',
-                                                name: 'Wells Frago'
-                                            },
-                                            {
-                                                ID: 6,
-                                                __typename: 'Bank',
-                                                name: 'Vanguard'
-                                            }
-                                        ],
-                                        title: 'State Street'
-                                    }
-                                ],
-                                name: 'Morgan Stanley'
-                            },
-                            {
-                                ID: 2,
-                                __typename: 'Bank',
-                                acted_in: [
-                                    {
-                                        ID: 3,
-                                        __typename: 'Bank',
-                                        genres: [
-                                            {
-                                                ID: 7,
-                                                __typename: 'Bank',
-                                                name: 'BlackRock'
-                                            }
-                                        ],
-                                        title: 'Trip to the Moon, A (Voyage dans la lune, Le)'
-                                    }
-                                ],
-                                name: 'Goldman Sacs'
-                            }
-                        ]
-                    }
-                }}
-                layout="graph"
-                // style = {{fontSize: 50}}
-                renderer="cytoscape"
+    const navigate = useNavigate();
+  return (
+    <>
+    
+    <div style={{ marginBottom: "3.5vw", width:"100% " }}>
+      <Row gutter={[16, 24]}>
+        <Col span={8}>
+          <Card
+          onClick={navigate("/StockAnalysis")}
+            style={{
+              width: 350,
+            }}
+            cover={
+              <img
+                alt="example"
+                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+              />
+            }
+            // actions={[
+            //   <SettingOutlined key="setting" />,
+            //   <EditOutlined key="edit" />,
+            //   <EllipsisOutlined key="ellipsis" />,
+            // ]}
+          >
+            <Meta
+              avatar={
+                <Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel" />
+              }
+              title="Stock Market Analysis"
+              description="This page is for Stock Market Analysis"
             />
-        </div>
-    );
+          </Card>
+        </Col>
+        <Col span={8}>
+          <Card
+          
+            style={{
+              width: 350,
+            }}
+            cover={
+              <img
+                alt="example"
+                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+              />
+            }
+            // actions={[
+            //   <SettingOutlined key="setting" />,
+            //   <EditOutlined key="edit" />,
+            //   <EllipsisOutlined key="ellipsis" />,
+            // ]}
+          >
+            <Meta
+              avatar={
+                <Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel" />
+              }
+              title="Stock Prediction"
+              description="This is for Stock prediction"
+            />
+          </Card>
+        </Col>
+        <Col span={8}>
+          <Card
+            style={{
+              width: 350,
+            }}
+            cover={
+              <img
+                alt="example"
+                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+              />
+            }
+            // actions={[
+            //   <SettingOutlined key="setting" />,
+            //   <EditOutlined key="edit" />,
+            //   <EllipsisOutlined key="ellipsis" />,
+            // ]}
+          >
+            <Meta
+              avatar={
+                <Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel" />
+              }
+              title="Portfolio Optimization"
+              description="This is the Portfolio optimization"
+            />
+          </Card>
+        </Col>
+        <Col span={8}>
+          <Card
+            style={{
+              width: 350,
+            }}
+            cover={
+              <img
+                alt="example"
+                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+              />
+            }
+            // actions={[
+            //   <SettingOutlined key="setting" />,
+            //   <EditOutlined key="edit" />,
+            //   <EllipsisOutlined key="ellipsis" />,
+            // ]}
+          >
+            <Meta
+              avatar={
+                <Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel" />
+              }
+              title="Card title"
+              description="This is the description"
+            />
+          </Card>
+        </Col>
+        <Col span={8}>
+          <Card
+            style={{
+              width: 350,
+            }}
+            cover={
+              <img
+                alt="example"
+                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+              />
+            }
+            // actions={[
+            //   <SettingOutlined key="setting" />,
+            //   <EditOutlined key="edit" />,
+            //   <EllipsisOutlined key="ellipsis" />,
+            // ]}
+          >
+            <Meta
+              avatar={
+                <Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel" />
+              }
+              title="Card title"
+              description="This is the description"
+            />
+          </Card>
+        </Col>
+        <Col span={8}>
+          <Card
+            style={{
+              width: 350,
+            }}
+            cover={
+              <img
+                alt="example"
+                src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+              />
+            }
+            // actions={[
+            //   <SettingOutlined key="setting" />,
+            //   <EditOutlined key="edit" />,
+            //   <EllipsisOutlined key="ellipsis" />,
+            // ]}
+          >
+            <Meta
+              avatar={
+                <Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel" />
+              }
+              title="Card title"
+              description="This is the description"
+            />
+          </Card>
+        </Col>
+      </Row>
+    </div>
+    </>
+  );
 }
 
 export default Index;
-

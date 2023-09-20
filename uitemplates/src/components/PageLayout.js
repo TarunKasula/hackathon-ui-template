@@ -10,10 +10,10 @@ import "../styles/componentsCSS/contentContainer.css";
 const { Footer, Content, Header, Sider } = Layout;
 
 function PageLayout() {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
 
   return (
-    <Layout style={{ minHeight: "100vh", minWidth: "100vw" }}>
+    <Layout style={{ minHeight: "100%", minWidth: "100%" }}>
       <Layout>
         <Header
           style={{
@@ -48,7 +48,10 @@ function PageLayout() {
             ></Button>
             <SideNavbar />
           </Sider>
-          <Content className="content">       <AppRouter/></Content>
+          <Content className="content">
+            {" "}
+            <AppRouter />
+          </Content>
         </Layout>
         <footer
           style={{
